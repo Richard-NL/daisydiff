@@ -68,20 +68,20 @@ public class HtmlDiffHandler implements HtmlDiffService.Iface {
 
 			DomTreeBuilder oldHandler = new DomTreeBuilder();
 			cleaner.cleanAndParse(oldSource, oldHandler);
-			System.out.print(".");
+
 			TextNodeComparator leftComparator = new TextNodeComparator(
 					oldHandler, locale);
 
 			DomTreeBuilder newHandler = new DomTreeBuilder();
 			cleaner.cleanAndParse(newSource, newHandler);
-			System.out.print(".");
+
 			TextNodeComparator rightComparator = new TextNodeComparator(
 					newHandler, locale);
 
 			postProcess.startDocument();
 			postProcess.startElement("", "diffreport", "diffreport",
 					new AttributesImpl());
-//			doCSS(css, postProcess);
+
 			postProcess.startElement("", "diff", "diff",
 					new AttributesImpl());
 			HtmlSaxDiffOutput output = new HtmlSaxDiffOutput(postProcess,
@@ -89,7 +89,7 @@ public class HtmlDiffHandler implements HtmlDiffService.Iface {
 
 			HTMLDiffer differ = new HTMLDiffer(output);
 			differ.diff(leftComparator, rightComparator);
-			System.out.print(".");
+
 			postProcess.endElement("", "diff", "diff");
 			postProcess.endElement("", "diffreport", "diffreport");
 			postProcess.endDocument();
@@ -120,6 +120,5 @@ public class HtmlDiffHandler implements HtmlDiffService.Iface {
 		}
 
 		System.out.println("done");
-
 	}
 }
