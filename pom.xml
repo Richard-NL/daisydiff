@@ -22,16 +22,16 @@
 
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>org.cyberneko</groupId>
-        <artifactId>html</artifactId>
-        <version>1.9.8</version>
-      </dependency>
-      <dependency>
-        <groupId>org.eclipse.core.runtime</groupId>
-        <artifactId>eclipse-core-runtime</artifactId>
-        <version>20070801</version>
-      </dependency>
+      <!--<dependency>-->
+        <!--<groupId>net.sourceforge.nekohtml</groupId>-->
+        <!--<artifactId>nekohtml</artifactId>-->
+        <!--<version>1.9.22</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+        <!--<groupId>org.eclipse.core</groupId>-->
+        <!--<artifactId>org.eclipse.core.runtime</artifactId>-->
+        <!--<version>3.7.0</version>-->
+      <!--</dependency>-->
       <dependency>
         <groupId>xerces</groupId>
         <artifactId>xercesImpl</artifactId>
@@ -48,12 +48,14 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.cyberneko</groupId>
-      <artifactId>html</artifactId>
+      <groupId>net.sourceforge.nekohtml</groupId>
+      <artifactId>nekohtml</artifactId>
+      <version>1.9.22</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.core.runtime</groupId>
-      <artifactId>eclipse-core-runtime</artifactId>
+      <groupId>org.eclipse.core</groupId>
+      <artifactId>org.eclipse.core.runtime</artifactId>
+      <version>3.7.0</version>
     </dependency>
     <dependency>
       <groupId>xerces</groupId>
@@ -65,6 +67,11 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.thrift</groupId>
+      <artifactId>libthrift</artifactId>
+      <version>0.9.3</version>
     </dependency>
 
   </dependencies>
